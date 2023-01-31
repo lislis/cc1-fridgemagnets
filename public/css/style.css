@@ -1,0 +1,67 @@
+html, body
+{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    color:lightgray;
+    font-size: 100%;
+    font-family: Gill Sans, sans-serif;
+    overflow: hidden;
+    background-image: url("../img/bg_pattern.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 20%;
+    background-color: white;
+    //    background-blend-mode: multiply;
+    animation: strobe 1s infinite linear alternate;
+}
+
+@keyframes strobe {
+  0% {
+    background-blend-mode: multiply;
+  }
+  100% {
+    background-blend-mode: difference;
+  }
+}
+
+.fridge {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 10px;
+    //background-color: tr;
+    background-image: url("../img/fridge.png");
+    background-size: 160%;
+    background-position: center 2%;
+    background-repeat: no-repeat;
+}
+
+.magnet {
+    position: absolute;
+    cursor: pointer;
+    padding: 3px;
+    font-size: 0.75rem;
+    color: black;
+    border: solid 3px currentColor;
+    background-color: white;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-weight: 600;
+}
+
+.magnet.active {
+  color: white;
+  background: black;
+}
+
+.magnet.moved {
+  color: red;
+  background: white;
+}
